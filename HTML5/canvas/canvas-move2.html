@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+  body{
+	  background:#000;
+	  }
+  #canvas{
+		 background:#fff;
+		 }
+</style>
+</head>
+
+<body>
+<canvas id="canvas" width="300" height="300">
+ 该浏览器不支持HTML5
+</canvas>
+<script>
+  window.onload=function(){
+	   var oC=document.getElementById('canvas');
+	   var oGC=oC.getContext('2d');
+	   var num=0;
+	   oGC.fillRect(0,0,100,100);
+	   setInterval(function(){
+		   num++;
+		   oGC.clearRect(0,0,oC.width,oC.height);
+		   oGC.fillRect(num,num,100,100);
+		   },30);
+	  }
+</script>
+</body>
+</html>

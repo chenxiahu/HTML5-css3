@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+ .box{
+	 width:100px;
+	 height:100px;
+	 background:pink;
+	 margin-top:20px;
+	 -webkit-animation:move 4s ease-in infinite;
+	 }
+@-webkit-keyframes move{
+	0%{
+		width:100px;
+		}
+	20%{
+		height:300px;
+		}
+     40%{
+		 opacity:0;
+		 }
+	 50%{
+		 width:500px;
+		 opacity:1;
+		 }
+ 	}
+</style>
+</head>
+
+<body>
+<div class="box"></div>
+</body>
+</html>

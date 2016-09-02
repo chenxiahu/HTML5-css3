@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+ *{margin:0px;padding:0px;}
+ #nav{background:#ccc;width:600px;height:40px;margin:0px auto;}
+ ul{list-style:none;margin-top:40px}
+ ul li{float:left; line-height:40px;text-align:center;position:relative}
+ a{text-decoration:none;color:#000;display:block;padding:0 10px;}
+ a:hover{color:#fff;background-color:#666;}
+ ul li ul li{float:none;background-color:#eee;margin-top:2px;}
+ ul li ul{position:absolute;left:0px;top:0px;display:none; }
+ ul li ul li a:hover{ background:#39C;}
+ /*ul li:hover ul{display:block;}*/
+</style>
+</head>
+
+<body>
+<div id="nav">
+  <ul>
+    <li><a href="#">首页</a></li>
+    <li onMouseOver="show(this)" onMouseOut="hide(this)"><a href="#">课程大厅</a>
+      <ul>
+       <li><a href="#">JavaScript</a></li>
+       <li><a href="#">jQuery</a></li>
+      </ul>
+    </li>
+    
+    <li onMouseOver="show(this)" onMouseOut="hide(this)"><a href="#">学习中心</a>
+      <ul>
+       <li><a href="#">JavaScript</a></li>
+       <li><a href="#">jQuery</a></li>
+      </ul>
+    </li>
+    <li><a href="#">关于我们</a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+   function show(li){
+	   var submenu=li.getElementsByTagName("ul")[0];
+	   submenu.style.display="block";
+	   }
+	 function hide(li){
+		  var submenu=li.getElementsByTagName("ul")[0];
+	      submenu.style.display="none";
+		 }
+</script>
+</body>
+</html>

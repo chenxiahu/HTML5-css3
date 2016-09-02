@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+ .box li{
+	 list-style:none;
+	 margin:2px;
+	 width:80px;
+	 background:#CCC;
+	 border-left:3px solid #000;
+	 border-top-right-radius:40px;
+	 border-bottom-right-radius:40px;
+	/* -webkit-transition:1;*/
+	 -webkit-transition: all 2s ease-out;
+	 -moz-transition: all 2s ease-out;
+	 -o-transition:all 2s ease-out;
+	 transition: all 2s ease-out;
+	 }
+	.box li:hover{
+		background:#F60;
+		width:120px;
+		}
+</style>
+</head>
+
+<body>
+ 
+  <ul class="box">
+   <li>HTML</li>
+   <li>CSS3</li>
+   <li>jQuery</li>
+   <li>Ajax</li>
+   <li>HTML5</li>
+   <li>CSS3</li>
+   <li>Ajax</li>
+  </ul>
+  <script>
+   var box=document.getElementsByClassName('box')[0];
+   var allli=box.getElementsByTagName('li');
+   /*for(i=0;i<allli.length;i++){
+	   allli[i].style.WebkitTransition="3s "+(allli.length-i-1)*100+"ms";
+	}*/
+  </script>
+</body>
+</html>

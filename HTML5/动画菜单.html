@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+  .top-nav{
+	  font-size:12px;
+	  font-weight:bold;
+	  list-style:none;
+	  position:relative;
+	  width:400px;
+	  height:100px;
+	  position:relative;
+	  }
+	.top-nav li{
+		float:left;
+		margin-right:1px;
+		 background:#ccc;
+		}
+		
+	.top-nav li a{
+		line-height:20px;
+		text-decoration:none;
+        color:#666666;
+		display:block;
+		width:80px;
+		text-align:center;
+		}
+	.top-nav li a:hover{
+		background:#F00;
+		color:#FFF;
+		}
+	.top-nav li ul{
+		display:none;
+		list-style:none;
+		padding:0;
+		float:left;
+		position:absolute;
+	 }
+	 .top-nav li ul li{
+		 height:40px;
+		 text-align:center;
+		 line-height:40px;
+		 font:20px
+		 }
+	 .note{
+		 color:#3f240;
+		 display:block;
+		 }
+	/* .top-nav li:hover ul{
+		 display:block;
+		 }
+	 .top-nav li:hover ul li ul{
+		 display:none;
+		 }
+	 .top-nav li ul li:hover ul{
+		 display:block;
+		 }*/
+	 
+</style>
+</head>
+
+<body>
+<ul class="top-nav">
+  <li><a href="#"><span class="note">慕课网</span> </a>
+      <ul>
+     <li><a href="#">前端课程 </a></li>
+     <li><a href="#">手机开发 </a> </li>
+     <li><a href="#">后台编程</a></li>
+    </ul>
+  </li>
+  <li><a href="#">课程大厅 </a></li>
+  <li><a href="#">学习中心+</a></li>
+  <li><a href="#">关于我们 </a></li>
+</ul>
+<script src="file:///D|/jQuery测试/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+//兼容IE6 if($.browser.misie&&$.browser.version.substr(0,1)<7)
+  $(document).ready(function(e) {
+    $(".top-nav li").mousemove(function(){
+		$(this).find("ul").slideDown("2000");
+		});
+	$(".top-nav li").mouseleave(function(){
+		$(this).find("ul").slideUp("slow");
+		});
+});
+   
+   
+ 
+</script>
+</body>
+</html>

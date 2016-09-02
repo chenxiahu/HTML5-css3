@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<canvas id="c1" width="300" height="300"></canvas>
+<script>
+  window.onload=function(){
+	  var oC=document.getElementById('c1');
+	  var oGC=oC.getContext('2d');
+	  var obj=oGC.createLinearGradient(150,100,250,200);
+	  obj.addColorStop(0,'red');
+	  obj.addColorStop(1,'blue');
+	  oGC.fillStyle=obj;
+	  oGC.fillRect(150,100,100,100);
+	  }
+</script>
+
+</body>
+</html>

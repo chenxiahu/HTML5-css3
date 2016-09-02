@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+ body{
+	 background:url(images/bark.jpg);
+	 }
+	.box{
+		width:760px;
+		margin:0px auto;
+		 
+		}
+.box img{
+	width:100px;
+	height:100px;
+	border:3px solid #fff;
+	-webkit-transition:1s;
+    position:absolute; 
+	opacity:0.7;
+	}
+.box img:hover{
+	width:200px;
+	height:200px;
+	}
+</style>
+</head>
+
+<body>
+<div class="box">
+ <img src="images/image1.jpg"/>
+ <img src="images/image2.jpg"/>
+ <img src="images/image3.jpg"/>
+ <img src="images/image4.jpg"/>
+ <img src="images/image5.jpg"/>
+ <img src="images/image6.jpg"/>
+ <img src="images/image7.jpg"/>
+ <img src="images/image8.jpg"/>
+ <img src="images/image9.jpg"/>
+ <img src="images/image10.jpg"/>
+ <img src="images/image11.jpg"/>
+ <img src="images/image12.jpg"/>
+ <img src="images/image13.jpg"/>
+ <img src="images/image14.jpg"/>
+ <img src="images/image15.jpg"/>
+</div>
+<script type="text/javascript">
+  var box=document.getElementsByClassName('box')[0];
+  var allimg=box.getElementsByTagName('img');
+  for(var i=0;i<allimg.length;i++){
+	    var num=getRandom(0,500);
+		var x=getRandom(300, 1000);
+		var y=getRandom(50,300);
+		/*allimg[i].style.transform="translate("+x+","+y+")";*/
+		allimg[i].style.left=x+'px';
+		allimg[i].style.top=y+'px';
+		allimg[i].style.transform="rotate("+num+"deg)";
+		console.log(num);
+		 
+	  }
+ 
+ function getRandom(min,max){
+		return Math.floor(Math.random()*(max-min)+min);
+ }
+</script>
+</body>
+</html>

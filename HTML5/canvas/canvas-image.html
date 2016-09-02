@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<canvas id="canvas" width="1200" height="1200">你的浏览器不支持该功能</canvas>
+<script>
+  var canvas=document.getElementById('canvas');
+  var context=canvas.getContext('2d');
+  var newImg= new Image();
+  newImg.src="5.jpg";
+  newImg.onload=function(){
+	  context.drawImage(newImg,0,0);
+	  //context.drawImg()
+	  }
+</script>
+</body>
+</html>

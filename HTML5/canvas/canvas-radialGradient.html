@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<canvas id="c1" width="400" height="400"></canvas>
+<script>
+  window.onload=function(){
+	  var oC=document.getElementById('c1');
+	  var oGC=oC.getContext('2d');
+	  var obj=oGC.createRadialGradient(200,200,100,200,200,150);
+	  obj.addColorStop(0,'red');
+	  obj.addColorStop(0.5,'yellow');
+	  obj.addColorStop(1,'blue');
+	  oGC.fillStyle=obj;
+	  oGC.fillRect(0,0,oC.width,oC.height);
+	  }
+</script>
+
+</body>
+</html>

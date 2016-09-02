@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<canvas id="canvas" width="600" height="600"></canvas>
+   <script>
+   var canvas=document.getElementById('canvas');
+   var context=canvas.getContext('2d');
+   context.arc(200,200,150,0,360*Math.PI/180,false);
+   context.fillStyle="red";
+   context.fill();
+  /* context.strokeStyle="pink";
+   context.stroke();*/
+   </script>
+
+</body>
+</html>
